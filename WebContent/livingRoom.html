@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Veio Automations</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="js/netws.js"></script>
+
+  </head>
+
+  <body ng-controller="HttpCtrl as app">
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h4 class="masthead-brand">Veio Automations</h4>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="home.html">Home</a></li>
+                  <li><a href="automations.html">Logout</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+  		  <div class="panel panel-primary">
+         <div class="panel-heading">
+              <h3 class="panel-title">
+              	<table border="0">
+              		<tr>
+              			<td width="85%" align="left"><b>Living Room <b></td>
+              			<td width="15%"><a class="btn btn-sm btn-default" href="automations.html" role="button">Back</a></td>
+              		</tr>
+              		
+              	</table>
+              
+             </h3>
+         </div>
+         <div class="panel-body">
+            
+          <div class="col-md-6" >
+          <form>
+          <table class="table" >
+            <thead>
+              <tr>
+                <th>Device</th>
+                <th>State</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img alt="Kitchen" src="images/tv.png" width="50px" height="20%"></td>
+                <td><span ng-class="app.tvAnswer == 'off' ? 'label label-danger' : 'label label-success'">{{app.tvAnswer}}</span><img  src="images/loading_spinner.gif" width="40%" height="20%" ng-style="app.tvLoadAnswer == 'showTVLoading' && {'visibility': 'visible'} || app.tvLoadAnswer == 'notShowTVLoading' && {'visibility': 'hidden'}" style="visibility: hidden"></td>
+                <td><a class="btn btn-sm btn-primary" href="#" role="button" ng-click="getActor(3)">{{app.tvAction}}</a><span class="label label-warning" ng-style="app.tvLoadError == 'showTVError' && {'visibility': 'visible'} || app.tvLoadError == 'notShowTVError' && {'visibility': 'hidden'}" style="visibility: hidden">Error</span></td>
+              </tr>
+              <tr>
+                <td><img alt="BedRoom" src="images/airConditioned.jpg" width="50px" height="20%"></td>
+                <td><span ng-class="app.airAnswer == 'off' ? 'label label-danger' : 'label label-success'">{{app.airAnswer}}</span><img  src="images/loading_spinner.gif" width="40%" height="20%" ng-style="app.airLoadAnswer == 'showAIRLoading' && {'visibility': 'visible'} || app.airLoadAnswer == 'notShowAIRLoading' && {'visibility': 'hidden'}" style="visibility: hidden"></td>
+                <td><a class="btn btn-sm btn-primary" href="#" role="button" ng-click="getActor(2)">{{app.airAction}}</a></td>
+              </tr>
+              <tr>
+                <td><img alt="BedRoom" src="images/net.png" width="50px" height="10%"></td>
+                <td><span ng-class="app.netAnswer == 'off' ? 'label label-danger' : 'label label-success'">{{app.netAnswer}}</span><img  src="images/loading_spinner.gif" width="40%" height="20%" ng-style="app.netLoadAnswer == 'showNETLoading' && {'visibility': 'visible'} || app.netLoadAnswer == 'notShowNETLoading' && {'visibility': 'hidden'}" style="visibility: hidden"></td>
+                <td><a class="btn btn-sm btn-primary" href="#" role="button" ng-click="getActor(6)">{{app.netAction}}</a></td>
+              </tr>
+              <tr>
+                <td><img alt="BedRoom" src="images/light.jpg" width="50px" height="40%"></td>
+                <td><span class="label label-danger" id="light_status_on">Off</span><span class="label label-success" id="light_status_off" style="visibility: hidden">On</span></td>
+                <td><a class="btn btn-sm btn-primary" href="#" role="button">Turn On</a></td>
+              </tr>
+              
+            </tbody>
+          </table>
+          </form>
+        </div>
+            
+             
+        </div>
+        
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by Lucas Ferst.</p>
+            </div>
+          </div>
+        
+    </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
