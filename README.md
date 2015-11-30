@@ -6,9 +6,9 @@ Responsable for exposing Arduino Microcontroller Board as a Web service, so it c
 
 ![alt tag](https://github.com/lferst/HouseAutomations/blob/master/arduinoProject/Arduino.png)
 
-<b>Web Application (J2EE/REST/AngularJS):</b>
+<b>Web Application (SpringBoot/Spring REST/AngularJS):</b>
 
-This next part of the project contains the Web application to deal with Arduino exposed Web Services.
+This next part of the project contains the Web application to deal with Arduino exposed Web Services. It was done using SpringBoot and so among some other advantages, it has an embedded tomcat instance in it removing the dependency of having an environment pre-setup with a specific web server.   
 
 
 ![alt tag](https://github.com/lferst/HouseAutomations/blob/master/screens.jpg)
